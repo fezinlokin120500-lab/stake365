@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stake365 — Casino & Games</title>
+<style>
+:root{--bg:#0d1319;--side:#101820;--panel:#17232d;--panel2:#1d2b36;--line:#2a3b46;--muted:#9baab5;--green:#00d68f;--white:#f3f7f9}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--white);font:14px Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+button,input{font:inherit}button{cursor:pointer;border:0;border-radius:8px;font-weight:750;padding:11px 15px}
+header{height:66px;position:sticky;top:0;z-index:5;background:#101820;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:24px;padding:0 22px}
+.logo{font-size:26px;letter-spacing:-1.5px;font-weight:950;white-space:nowrap}.logo span{color:var(--green)}
+.search{max-width:420px;flex:1;background:#1b2832;border:1px solid #2c3d48;border-radius:8px;padding:10px 13px;color:#eaf0f3}
+.headright{margin-left:auto;display:flex;align-items:center;gap:10px}.balance{background:#1b2933;border:1px solid #30414b;border-radius:8px;padding:9px 12px;font-weight:800;color:var(--green);white-space:nowrap}.green{background:var(--green);color:#052419}.ghost{background:#263640;color:#e8eff2}
+.layout{display:grid;grid-template-columns:218px minmax(0,1fr);max-width:1500px;margin:auto;min-height:calc(100vh - 66px)}
+aside{background:#101820;border-right:1px solid var(--line);padding:18px 12px}.navlabel{font-size:10px;letter-spacing:1.4px;color:#72838f;font-weight:850;padding:12px}.nav{display:flex;align-items:center;gap:12px;padding:12px;border-radius:8px;color:#c4d0d6;margin:3px 0}.nav.active,.nav:hover{background:#1c302d;color:var(--green)}.ico{font-size:18px;width:22px;text-align:center}.sidebox{margin:20px 5px 0;padding:13px;background:#192630;border-radius:10px;color:var(--muted);font-size:12px;line-height:1.5}
+main{padding:22px;min-width:0}.hero{border:1px solid #25463d;border-radius:14px;padding:24px;background:radial-gradient(ellipse at 80% 20%,#1d5946 0,transparent 38%),linear-gradient(110deg,#172a2a,#17232d 65%);display:flex;align-items:center;justify-content:space-between;gap:15px}
+.kicker{color:var(--green);font-size:10px;letter-spacing:1.5px;font-weight:900}.hero h1{font-size:30px;margin:9px 0}.hero p{color:#afbdc5;margin:0;line-height:1.5}.hero .heroart{font-size:70px;filter:drop-shadow(0 8px 18px #0008)}
+.sectionhead{display:flex;justify-content:space-between;align-items:center;margin:25px 0 13px}.sectionhead h2{font-size:19px;margin:0}.muted{color:var(--muted);font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.game{background:var(--panel);border:1px solid var(--line);border-radius:11px;overflow:hidden;cursor:pointer;transition:.16s}.game:hover,.game.selected{border-color:var(--green);transform:translateY(-2px)}.art{height:112px;display:flex;align-items:center;justify-content:center;font-size:46px;background:radial-gradient(circle at 50% 35%,#355c52,#17242d 70%)}.game:nth-child(2n) .art{background:radial-gradient(circle at 50% 35%,#55402f,#17242d 70%)}.gameinfo{padding:12px}.gameinfo strong{display:block}.gameinfo span{font-size:11px;color:var(--muted)}
+.lower{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;margin-top:20px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}.panel h2{font-size:17px;margin:0 0 5px}.controls{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}.field label{display:block;color:var(--muted);font-size:11px;margin-bottom:6px}.field input{width:100%;background:#0d171e;color:white;border:1px solid #354752;border-radius:8px;padding:11px;outline:none}.field input:focus{border-color:var(--green)}.play{width:100%;margin-top:12px;background:var(--green);color:#052419;padding:14px}.result{background:#0e191f;border:1px solid #2b4147;border-radius:8px;padding:12px;margin-top:12px;min-height:43px;color:#dce8ed}
+.friend{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line)}.avatar{width:30px;height:30px;border-radius:50%;display:inline-grid;place-items:center;background:#315246;margin-right:9px}.online{color:var(--green);font-size:11px}.invite{margin-top:13px;width:100%;background:#263a43;color:white}
+.historyrow{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:12px}.win{color:var(--green)}.loss{color:#ff8888}
+footer{color:#71818c;text-align:center;padding:25px;font-size:11px;line-height:1.6}
+@media(max-width:900px){.layout{grid-template-columns:65px 1fr}aside{padding:12px 7px}.nav{justify-content:center}.nav span:not(.ico),.navlabel,.sidebox{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){header{padding:0 12px;gap:10px}.logo{font-size:21px}.search{display:none}.headright{gap:6px}.balance{font-size:12px;padding:9px}.layout{grid-template-columns:1fr}aside{display:none}main{padding:14px}.hero{padding:19px}.hero h1{font-size:25px}.heroart{display:none}.lower{grid-template-columns:1fr}.grid{gap:9px}.art{height:90px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="logo">STAKE<span>365</span></div>
+ <input class="search" placeholder="⌕  Search games">
+ <div class="headright"><div class="balance" id="headerBalance">R$ 200,00</div><button class="green" id="addBtn">＋ Add</button><button class="ghost">♙</button></div>
+</header>
+<div class="layout">
+<aside>
+ <div class="navlabel">MENU</div>
+ <div class="nav active"><span class="ico">⌂</span><span>Home</span></div>
+ <div class="nav"><span class="ico">🎰</span><span>Casino</span></div>
+ <div class="nav"><span class="ico">⚡</span><span>Originals</span></div>
+ <div class="nav"><span class="ico">🏆</span><span>Leaderboard</span></div>
+ <div class="nav"><span class="ico">👥</span><span>Friends</span></div>
+ <div class="navlabel" style="margin-top:18px">YOUR ACCOUNT</div>
+ <div class="nav"><span class="ico">◉</span><span>Profile</span></div>
+ <div class="nav"><span class="ico">↻</span><span>Bet history</span></div>
+ <div class="sidebox"><b style="color:#e9f0f3">Stake365 Club</b><br>Play together, climb the rankings and challenge your friends.</div>
+</aside>
+<main>
+ <section class="hero"><div><div class="kicker">THE GAME STARTS HERE</div><h1>Welcome to Stake365</h1><p>Your favourite games, one place.<br>Challenge friends and climb the leaderboard.</p></div><div class="heroart">♠</div></section>
+ <div class="sectionhead"><h2>Popular games</h2><span class="muted">View all　›</span></div>
+ <section class="grid" id="games">
+  <article class="game selected" data-game="Dice"><div class="art">🎲</div><div class="gameinfo"><strong>Dice</strong><span>Stake Originals</span></div></article>
+  <article class="game" data-game="Crash"><div class="art">🚀</div><div class="gameinfo"><strong>Crash</strong><span>Stake Originals</span></div></article>
+  <article class="game" data-game="Plinko"><div class="art">🔴</div><div class="gameinfo"><strong>Plinko</strong><span>Popular</span></div></article>
+  <article class="game" data-game="Mines"><div class="art">💎</div><div class="gameinfo"><strong>Mines</strong><span>Stake Originals</span></div></article>
+  <article class="game" data-game="Slots"><div class="art">🎰</div><div class="gameinfo"><strong>Slots</strong><span>Casino</span></div></article>
+  <article class="game" data-game="Roulette"><div class="art">🎡</div><div class="gameinfo"><strong>Roulette</strong><span>Casino</span></div></article>
+  <article class="game" data-game="Blackjack"><div class="art">🃏</div><div class="gameinfo"><strong>Blackjack</strong><span>Casino</span></div></article>
+  <article class="game" data-game="Limbo"><div class="art">📈</div><div class="gameinfo"><strong>Limbo</strong><span>Stake Originals</span></div></article>
+ </section>
+ <section class="lower">
+  <div class="panel"><h2 id="gameTitle">Dice</h2><div class="muted">Set your stake and play a round</div>
+   <div class="controls"><div class="field"><label>BET AMOUNT (R$)</label><input id="bet" type="number" min="1" value="10" step=".01"></div><div class="field"><label>WIN CHANCE</label><input value="60%" disabled></div></div>
+   <button class="play" id="play">PLAY NOW</button>
+   <div class="result" id="result">Choose a game and place your bet.</div>
+   <div class="sectionhead" style="margin-bottom:0"><span class="muted">Payout on win</span><b style="color:var(--green)">1.50×</b></div>
+  </div>
+  <div class="panel"><h2>Friends online</h2><div class="muted">See who's playing right now</div>
+   <div class="friend"><span><span class="avatar">M</span>Mateus</span><span class="online">● Online</span></div>
+   <div class="friend"><span><span class="avatar">L</span>Lucas</span><span class="online">● Online</span></div>
+   <div class="friend"><span><span class="avatar">A</span>Ana</span><span class="muted">Away</span></div>
+   <button class="invite" id="invite">＋ Invite a friend</button>
+   <div class="sectionhead"><h2>Recent bets</h2></div><div id="history" class="muted">Your recent rounds will appear here.</div>
+  </div>
+ </section>
+</main>
+</div>
+<footer>Stake365 is a private social gaming experience. R$ balances are play credits with no cash value. No real-money deposits, withdrawals or prizes.</footer>
+<script>
+let balance=200,game='Dice',rows=[];
+const fmt=n=>'R$ '+n.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+function draw(){document.getElementById('headerBalance').textContent=fmt(balance)}
+document.querySelectorAll('.game').forEach(el=>el.onclick=()=>{document.querySelectorAll('.game').forEach(x=>x.classList.remove('selected'));el.classList.add('selected');game=el.dataset.game;document.getElementById('gameTitle').textContent=game;document.getElementById('result').textContent=game+' selected. Good luck!'});
+document.getElementById('addBtn').onclick=()=>{let raw=prompt('Add play credits (R$):','100');if(raw===null)return;let n=Number(raw);if(!Number.isFinite(n)||n<=0||n>1000000){alert('Enter an amount between 1 and 1,000,000.');return}balance+=n;draw();document.getElementById('result').textContent=fmt(n)+' in play credits added.'};
+document.getElementById('play').onclick=()=>{let n=Number(document.getElementById('bet').value);if(!Number.isFinite(n)||n<=0||n>balance){document.getElementById('result').textContent='Enter a valid bet within your available balance.';return}let won=Math.random()<.6,payout=won?n*1.5:0;balance=balance-n+payout;draw();rows.unshift({game,n,won,payout});rows=rows.slice(0,6);document.getElementById('result').textContent=won?'You won '+fmt(payout)+'!':'No win this round. Try again.';document.getElementById('history').innerHTML=rows.map(r=>`<div class="historyrow"><span>${r.game} · ${fmt(r.n)}</span><b class="${r.won?'win':'loss'}">${r.won?'+'+fmt(r.payout):'Lost'}</b></div>`).join('')};
+document.getElementById('invite').onclick=()=>{let link=location.href; if(navigator.clipboard?.writeText){navigator.clipboard.writeText(link).then(()=>alert('Invite link copied! Share this page with your friends.')).catch(()=>prompt('Copy this invite link:',link))}else prompt('Copy this invite link:',link)};
+draw();
+</script>
+</body></html>
